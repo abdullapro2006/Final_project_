@@ -1,0 +1,15 @@
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\bin\Debug\net6.0\C# final project.exe
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\bin\Debug\net6.0\C# final project.deps.json
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\bin\Debug\net6.0\C# final project.runtimeconfig.json
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\bin\Debug\net6.0\C# final project.dll
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\bin\Debug\net6.0\C# final project.pdb
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.csproj.AssemblyReference.cache
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.AssemblyInfoInputs.cache
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.AssemblyInfo.cs
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.csproj.CoreCompileInputs.cache
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.dll
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\refint\C# final project.dll
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.pdb
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\C# final project.genruntimeconfig.cache
+C:\Users\Abdullah Manafli\source\repos\C# final project\C# final project\obj\Debug\net6.0\ref\C# final project.dll
