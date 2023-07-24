@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using C__final_project.Data.Common;
+using C__final_project.Data.Enums;
 
 namespace C__final_project.Models
 {
@@ -14,7 +15,7 @@ namespace C__final_project.Models
         private  int counter = 0;
 
 
-        public Product(string name,double price,int count)
+        public Product(string name,double price,int count,Category category)
         {
             Name = name;
             Price = price;
@@ -27,5 +28,6 @@ namespace C__final_project.Models
         public string  Name { get; set; }
         public double Price { get; set; }
         public int Count { get; set; }
+        public Category Category { get; set; }
     }
 }
