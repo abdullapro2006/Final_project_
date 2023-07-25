@@ -3,6 +3,7 @@ using C__final_project.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace C__final_project.Services
                 Console.WriteLine("Please enter count of product:");
                 int count =Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Please enter category:");
-                string category = Console.ReadLine();
+                Category category = (Category) Enum.Parse(typeof(Category), Console.ReadLine(),true);
 
 
                 productService.AddProduct(name,price,count,category);
@@ -39,7 +40,19 @@ namespace C__final_project.Services
         {
             try
             {
-                Console.WriteLine("Please enter");
+                Console.WriteLine("Please enter name of product");
+                string name = Console.ReadLine();
+                Console.WriteLine("Please enter ID:");
+                int id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please enter count:");
+                int count = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please enter ");
+                Console.WriteLine("Please enter price:");
+                double price = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Please enter category:");
+                Category category = ( Category) Enum.Parse(typeof(Category),Console.ReadLine(),true);
+                productService.UpdateProduct(name,id,count,price,category);
+                Console.WriteLine("Product updated succefuly!");
 
             }
             catch (Exception ex)
@@ -55,6 +68,7 @@ namespace C__final_project.Services
                 Console.WriteLine("Please enter Product ID:");
                 int id = Convert.ToInt32(Console.ReadLine());
                 productService.DeleteProduct(id);
+                Console.WriteLine("Product deleted succesfuly!");
             }
             catch (Exception ex)
             {
@@ -80,7 +94,22 @@ namespace C__final_project.Services
 
             try
             {
+                Console.WriteLine("Enter category:");
+                Category categoryname = (Category)Enum.Parse(typeof (Category),Console.ReadLine(),true);
 
+                var foundproducts = productService.ShowProductInCategory(categoryname);
+                if(foundproducts.Count == 0)
+                {
+                    Console.WriteLine("No products found!");
+                    return;
+                }
+                foreach (var product in foundproducts)
+                {
+                    Console.WriteLine($"Name:{product.Name}, ID:{product.ID}, Count:{product.Count}, Price:{product.Price}, Category:{product.Category}");
+                }
+
+              
+                
             }
             catch (Exception ex)
             {
@@ -97,7 +126,15 @@ namespace C__final_project.Services
                 double minamount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Please enter maxamount:");
                 double maxamount = Convert.ToDouble(Console.ReadLine());
-                productService.ShowProductByAmountRange(minamount, maxamount);
+               var foundproduct =  productService.ShowProductByAmountRange(minamount, maxamount);
+                if(foundproduct.Count == 0)
+                {
+                    Console.WriteLine("No products found!");
+                }
+                foreach(var product in foundproduct)
+                {
+                    Console.WriteLine($"Name:{product.Name}, ID:{product.ID}, Count:{product.Count}, Price:{product.Price}, Category:{product.Category}");
+                }
             }
             catch (Exception ex)
             {
@@ -112,8 +149,9 @@ namespace C__final_project.Services
                 Console.WriteLine("Please enter name of product for search:");
                 string name = Console.ReadLine();
                 var foundproducts = productService.FindProductByName(name);
+                Console.WriteLine("Product founded");
 
-                if(foundproducts.Count == 0)
+                if (foundproducts.Count == 0)
                 {
                     Console.WriteLine("No products found");
                 }

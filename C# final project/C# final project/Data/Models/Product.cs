@@ -12,16 +12,17 @@ namespace C__final_project.Models
 
     public class Product : BaseEntity
     {
-        private  int counter = 0;
+        private static int counter = 0;
 
 
         public Product(string name,double price,int count,Category category)
         {
+            Category = category;
             Name = name;
             Price = price;
             Count = count;
             ID = counter;
-            count++;
+            counter++;
         }
 
 

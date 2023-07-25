@@ -12,13 +12,12 @@ namespace C__final_project.Services.Abstract
     public interface IMarketableForProducts // IMarketable interface created for using these methods in other methods.
     {
         public List<Product> GetProducts();
-        public int ReturnAllProduct();
-        public int AddProduct(string name,double price,int count,string category);
-        public int UpdateProduct(string choose);
-        public int ShowProductInCategory(string choose);
-        public int ShowProductByAmountRange(double minamount,double maxamount);
+        public void AddProduct(string name,double price,int count,Category category);
+        public void UpdateProduct(string name, int id, int count, double price, Category category);
+        public List<Product> ShowProductInCategory(Category categoryname);
+        public List<Product> ShowProductByAmountRange(double minamount,double maxamount);
         public List<Product> FindProductByName(string name);
-        public int DeleteProduct(int id);
+        public void DeleteProduct(int id);
 
 
 

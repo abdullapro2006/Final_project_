@@ -18,17 +18,23 @@ namespace C__final_project.Services
             products = new();
         }
 
-        public int AddProduct(string name,double price,int count,string category)
+        public void AddProduct(string name,double price,int count,Category category)
         {
-            throw new NotImplementedException();
+            if (name == null) throw new Exception("Name can not be null!");
+            if (price <= 0) throw new Exception("Price ca not be equals to 0 and less than 0");
+            if(count <= 0) throw new Exception("Count can not be equals to 0 and less than 0");
+            if(category == null) throw new Exception("Category can not be null");
+            var product = new Product(name, price, count, category);
+            products.Add(product);
         }
 
 
 
         public List<Product> FindProductByName(string name)
         {
-            throw new NotImplementedException();
-
+            if (string.IsNullOrWhiteSpace(name)) throw new Exception("Name can not be null");
+            var foundproducts = products.Where(x=> x.Name.ToLower().Trim() == name.ToLower().Trim()).ToList();
+            return foundproducts;
         }
 
         public List<Product> GetProducts()
@@ -37,41 +43,44 @@ namespace C__final_project.Services
         }
 
 
-
-        public int ReturnAllProduct()
+        public List<Product> ShowProductByAmountRange(double minamount, double maxamount)
         {
-            throw new NotImplementedException();
+            if (minamount <= 0) throw new Exception("Amount can not be equals to 0 and less than 0!");
+            if (maxamount <= 0) throw new Exception("Amount can not be equals to 0 and less than 0!");
+            if (minamount > maxamount) throw new Exception("Minamount can not be more than maxamount!");
+            return products.Where(x=>  x.Price >= minamount && x.Price <= maxamount).ToList();
         }
 
-        public int ShowProductByAmountRange(double minamount, double maxamount)
+        public List<Product> ShowProductInCategory(Category categoryname)
         {
-            throw new NotImplementedException();
+            if (categoryname == null) throw new Exception("Categort name can not be null!");
+            var foundproduct = products.Where(x=> x.Category == categoryname).ToList();
+            return foundproduct;
+
         }
 
-        public List<Category> ShowProductInCategory(string name)
+        public void UpdateProduct(string name,int id,int count,double price,Category category)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(name)) throw new Exception("Name can not be null!");
+            if (id < 0) throw new Exception("ID can not be less than 0");
+            if (count <= 0) throw new Exception("Count can not be equals to 0 and less than 0");
+            if (price <= 0) throw new Exception("Proce can not be equals to 0 and less than 0");
+            if (category == null) throw new Exception("Category can not be null!");
+            var existingproduct = products.FirstOrDefault(x=> x.ID == id);
+            if (existingproduct == null) throw new Exception("Product not found!");
+            existingproduct.Price = price;
+            existingproduct.Category = category;
+            existingproduct.Name = name;
+           
+            
+        }
+        public void DeleteProduct(int id) 
+        {
+            if (id < 0) throw new Exception("ID can not be negative!");
+            var existingproduct = products.FirstOrDefault(x=> x.ID == id);
+            if (existingproduct == null) throw new Exception("Not found!");
+            products = products.Where(x=> x.ID != id).ToList();
         }
 
-     
-
-        public int UpdateProduct(Product product)
-        {
-            throw new NotImplementedException();
-        }
-        public int DeleteProduct(int id) 
-        {
-            throw new NotImplementedException();
-        }
-
-        public int UpdateProduct(string choose)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IMarketableForProducts.ShowProductInCategory(string choose)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

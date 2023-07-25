@@ -11,7 +11,6 @@ namespace C__final_project.Services.Abstract
 
     {
         public List<Sale> GetSale();
-        
         public int AddSale(int amount, string saleitem, DateTime date);
         public int ReturnProductFromSale(int id);
         public int ShowSalesByDateRange(DateTime mindate, DateTime maxdate);
