@@ -94,6 +94,26 @@ namespace C__final_project.Services
 
             try
             {
+                Category category = Category.Meat;
+                Console.WriteLine(category);
+                Category category1 = Category.Vegatables;
+                Console.WriteLine(category1);
+                Category category2 = Category.Coffee;
+                Console.WriteLine(category2);
+                Category category3 = Category.Oils;
+                Console.WriteLine(category3);
+                Category category4 = Category.Bread;
+                Console.WriteLine(category4);
+                Category category5 = Category.Tea;
+                Console.WriteLine(category5);
+                Category category6 = Category.Seafood;
+                Console.WriteLine(category6);
+                Category category7 = Category.Fruits;
+                Console.WriteLine(category7);
+                Category category8 = Category.Drinks;
+                Console.WriteLine(category8);
+                Category category9 = Category.Sauces;
+                Console.WriteLine(category9);
                 Console.WriteLine("Enter category:");
                 Category categoryname = (Category)Enum.Parse(typeof (Category),Console.ReadLine(),true);
 

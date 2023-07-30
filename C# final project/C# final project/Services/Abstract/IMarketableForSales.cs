@@ -11,12 +11,12 @@ namespace C__final_project.Services.Abstract
 
     {
         public List<Sale> GetSale();
-        public int AddSale(int amount, string saleitem, DateTime date);
-        public int ReturnProductFromSale(int id);
-        public int ShowSalesByDateRange(DateTime mindate, DateTime maxdate);
-        public int ShowSalesByDate(DateTime date);
-        public int ShowSalesByAmountRange(int amount);
-        public int ShowSalesByID(int id);
+        public void AddSale(int id,int amount, DateTime date);
+        public void ReturnProductFromSale(int id);
+        public void ShowSalesByDateRange(DateTime mindate, DateTime maxdate);
+        public void ShowSalesByDate(DateTime date);
+        public void ShowSalesByAmountRange(int amount);
+        public void ShowSalesByID(int id);
 
 
     }

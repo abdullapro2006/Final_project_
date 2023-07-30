@@ -88,8 +88,12 @@ namespace C__final_project.Helpers
                 Console.WriteLine("4. Show all sales");
                 Console.WriteLine("5. Show sales by mindate and maxdate range");
                 Console.WriteLine("6. Show sales by amount range");
-                Console.WriteLine("7. Show sales by data range");
+                Console.WriteLine("7. Show sales by date range");
                 Console.WriteLine("8. Show sales by ID");
+                Console.WriteLine("0. Go back");
+                Console.WriteLine("------------------------");
+                Console.WriteLine("Please, select an option:");
+                Console.WriteLine("------------------------");
 
                 while (!int.TryParse(Console.ReadLine(), out option))
                 {
@@ -100,6 +104,33 @@ namespace C__final_project.Helpers
 
                 switch (option)
                 {
+                    case 1:
+                        MenuServiceForSales.MenuAddSale();
+                        break;
+                    case 2:
+                        MenuServiceForSales.MenuReturnProduct();
+                        break;
+                    case 3:
+                        MenuServiceForSales.MenuRemoveSale();
+                        break;
+                        case 4:
+                            MenuServiceForSales.MenuShowAllSales();
+                        break;
+                        case 5:
+                            MenuServiceForSales.MenuShowSalesByDateRange();
+                        break;
+                        case 6:
+                            MenuServiceForSales.MenuShowSalesByAmountRange();
+                        break;
+                        case 7:
+                        MenuServiceForSales.MenuShowSalesByDate();
+                        break;
+                        case 8:
+                            MenuServiceForSales.MenuShowSalesByID();
+                        break;
+                    case 0:
+                        break;
+
                     default:
                         Console.WriteLine("No such option!");
                         break;
