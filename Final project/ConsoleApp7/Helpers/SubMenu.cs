@@ -100,16 +100,16 @@ namespace finalProject.Helpers
                 Console.WriteLine("7. Show sales on given date");
                 Console.WriteLine("8. Find Sales by given ID");
                 Console.WriteLine("0. Go back");
-                Console.WriteLine("------------------------");
+                Console.WriteLine("-------------------------");
                 Console.WriteLine("Please, select an option:");
-                Console.WriteLine("------------------------");
+                Console.WriteLine("-------------------------");
 
 
                 while (!int.TryParse(Console.ReadLine(), out option))
                 {
-                    Console.WriteLine("------------------------");
+                    Console.WriteLine("-------------------------");
                     Console.WriteLine("Please, enter a valid option:");
-                    Console.WriteLine("------------------------");
+                    Console.WriteLine("-------------------------");
                 }
 
                 switch (option)

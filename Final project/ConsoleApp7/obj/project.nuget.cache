@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0LORlS58yYfZU7xZfRejn55Iehq4E35C6/D88f32swU7ysn/vXG4DTetoBn8gX1Qe6EzCOOUcjp4Kb1FrUNwpw==",
+  "dgSpecHash": "LWYs4OLbgHsQeplNrT7lL8YWELAEK42ju49D5w41bTeAcxoKL0UBERL+yJXusNmJrOviwcMHadqwU26d6BSQtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abdullah Manafli\\source\\repos\\ConsoleApp7\\ConsoleApp7\\ConsoleApp7.csproj",
+  "projectFilePath": "C:\\Users\\Abdullah Manafli\\source\\repos\\Final project\\ConsoleApp7\\ConsoleApp7.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abdullah Manafli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Abdullah Manafli\\.nuget\\packages\\microsoft.netcore.targets\\1.1.2\\microsoft.netcore.targets.1.1.2.nupkg.sha512",

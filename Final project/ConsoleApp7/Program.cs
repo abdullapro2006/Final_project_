@@ -19,18 +19,19 @@ namespace finalProject
                 Console.WriteLine("1. Operation on Products");
                 Console.WriteLine("2. Operation on Sales");
                 Console.WriteLine("0. Exit");
-               
 
-                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+                Console.WriteLine("-------------------------");
                 Console.WriteLine("Enter an option please:");
-                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~");
+                Console.WriteLine("-------------------------");
 
 
                 while (!int.TryParse(Console.ReadLine(), out option))
                 {
+                    Console.WriteLine("-------------------------");
                     Console.WriteLine("Invalid option!");
                     Console.WriteLine("Enter an option please:");
-                    Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    Console.WriteLine("-------------------------");
                 }
 
 
@@ -45,7 +46,7 @@ namespace finalProject
                         break;
                        
                     case 0:
-                        Console.WriteLine("Good bye!");
+                        Console.WriteLine("Bye!");
                         break;
                     default:
                         Console.WriteLine("There is no such option!");

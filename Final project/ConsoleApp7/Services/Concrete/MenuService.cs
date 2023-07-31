@@ -411,7 +411,7 @@ namespace finalProject.Services.Concrete
                     {
                         Console.WriteLine($"Sale ID: {sale.ID} | Amount: {sale.Amount} | Date: {sale.Date}");
 
-                        // shows the details of each sale item in the sale
+                       
                         foreach (var saleItem in sale.Items)
                         {
                             Console.WriteLine($"   - Product ID: {saleItem.Product.ID}, Name: {saleItem.Product.Name}, Quantity: {saleItem.Quantity}");

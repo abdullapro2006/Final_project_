@@ -166,7 +166,7 @@ namespace finalProject.Services.Concrete
                     return;
                 }
 
-                SaleItem saleItem = sale.Items.Find(si => si.Product.ID == productID);
+                SaleItem saleItem = sale.Items.Find(s => s.Product.ID == productID);
                 if (saleItem == null)
                 {
                     Console.WriteLine("Product not found in the sale.");
